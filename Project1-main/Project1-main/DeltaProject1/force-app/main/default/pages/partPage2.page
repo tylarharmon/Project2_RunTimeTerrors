@@ -1,0 +1,26 @@
+<apex:page controller="newPartsController" lightningStylesheets="true">
+    <script>
+        function comfirmCancel() {
+            var isCancel = confirm("Are you sure you wish to cancel?");
+            if (isCancel) return true;
+
+            return false;
+        }
+    </script>
+    <apex:sectionHeader title="New Part Order" subtitle="Step 2 of 3"/>
+        <apex:form >
+            <apex:pageBlock title="Part Informaiton" mode="edit">
+                <apex:pageBlockButtons >
+                    <apex:commandButton action="{!step1}" value="Previous"/>
+                    <apex:commandButton action="{!step3}" value="Next"/>
+                    <apex:commandButton action="{!cancel}" value="Cancel" onclick="return confirmCancel()" immediate="true"/>
+                </apex:pageBlockButtons>
+                <apex:pageBlockSection title="Part Order Information" columns="1">
+                    <apex:inputField id="partAmmount" value="{!parts.Quantity__c}"/>
+                    <apex:inputField id="partDateOrdered" value="{!parts.Date_Ordered__c}"/>
+                    <apex:inputField id="partArrival" value="{!parts.Expected_Arrival_Date__c}"/>
+                    <apex:inputField id="partSupplier" value="{!parts.Supplier__c}"/>
+                </apex:pageBlockSection>
+            </apex:pageBlock>
+        </apex:form>
+</apex:page>

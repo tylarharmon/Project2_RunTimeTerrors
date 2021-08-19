@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <apiVersion>52.0</apiVersion>
+    <assignments>
+        <name>Information_Assignments</name>
+        <label>Information Assignments</label>
+        <locationX>878</locationX>
+        <locationY>67</locationY>
+        <assignmentItems>
+            <assignToReference>PartsToInsert.Name</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Part_Name</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>PartsToInsert.Quantity__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Quantity</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>PartsToInsert.Part_Type__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Part_Choice</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Create_Part_Order</targetReference>
+        </connector>
+    </assignments>
+    <dynamicChoiceSets>
+        <name>PartList</name>
+        <dataType>Picklist</dataType>
+        <displayField xsi:nil="true"/>
+        <object xsi:nil="true"/>
+        <picklistField>Part_Type__c</picklistField>
+        <picklistObject>Parts_Order_List__c</picklistObject>
+    </dynamicChoiceSets>
+    <interviewLabel>Parts Order Wizard {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Parts Order Wizard</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>FREE_FORM_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>Flow</processType>
+    <recordCreates>
+        <name>Create_Part_Order</name>
+        <label>Create Part Order</label>
+        <locationX>1112</locationX>
+        <locationY>66</locationY>
+        <connector>
+            <targetReference>Part_Order_Created</targetReference>
+        </connector>
+        <faultConnector>
+            <targetReference>Fault_Screen</targetReference>
+        </faultConnector>
+        <inputReference>PartsToInsert</inputReference>
+    </recordCreates>
+    <screens>
+        <name>Fault_Screen</name>
+        <label>Fault Screen</label>
+        <locationX>1118</locationX>
+        <locationY>248</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <fields>
+            <name>Fault</name>
+            <fieldText>&lt;p&gt;{!$Flow.FaultMessage}&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>Part_Information</name>
+        <label>Part Information</label>
+        <locationX>679</locationX>
+        <locationY>68</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <connector>
+            <targetReference>Information_Assignments</targetReference>
+        </connector>
+        <fields>
+            <name>Part_Name</name>
+            <dataType>String</dataType>
+            <fieldText>Part Name</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>Quantity</name>
+            <dataType>Number</dataType>
+            <fieldText>Quantity</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>true</isRequired>
+            <scale>0</scale>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>Part_Order_Created</name>
+        <label>Part Order Created</label>
+        <locationX>1337</locationX>
+        <locationY>65</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <fields>
+            <name>PartOrder</name>
+            <fieldText>&lt;p&gt;The Part Order Was Created&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>Part_Type</name>
+        <label>Part Type</label>
+        <locationX>485</locationX>
+        <locationY>69</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <connector>
+            <targetReference>Part_Information</targetReference>
+        </connector>
+        <fields>
+            <name>Part_Choice</name>
+            <choiceReferences>PartList</choiceReferences>
+            <dataType>String</dataType>
+            <fieldText>Part Choice</fieldText>
+            <fieldType>DropdownBox</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <start>
+        <locationX>50</locationX>
+        <locationY>50</locationY>
+        <connector>
+            <targetReference>Part_Type</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+    <variables>
+        <name>PartsToInsert</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Parts_Order_List__c</objectType>
+    </variables>
+</Flow>

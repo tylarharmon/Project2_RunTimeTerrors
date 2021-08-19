@@ -1,0 +1,39 @@
+<apex:page controller="BoatSoldController" lightningStylesheets="true">
+  <script>
+  function confirmCancel() {
+      var isCancel = confirm("Are you sure you wish to cancel?");
+      if (isCancel) return true;
+  
+     return false;
+  }  
+  </script>
+  <apex:sectionHeader title="New Boat Sold" />
+    <apex:form >
+      <apex:pageBlock title="Customer and Boat Information" mode="edit">
+
+        <!-- The pageBlockButtons tag defines the buttons that appear at the top
+             and bottom of the pageBlock. Like a facet, it can appear anywhere in
+             a pageBlock, but always defines the button areas.-->
+        <!-- The Next button contained in this pageBlockButtons area
+             calls the step2 controller method, which returns a pageReference to
+             the next step of the wizard. -->
+        <apex:pageBlockButtons >
+          <apex:commandButton action="{!save}" value="Save"/>
+          <apex:commandButton action="{!cancel}" value="Cancel" 
+                              onclick="return confirmCancel()" immediate="true"/>
+        </apex:pageBlockButtons>
+      <apex:pageBlockSection title="Boat Sold Information">
+
+        <!-- Within a pageBlockSection, inputFields always display with their
+             corresponding output label. -->
+        <apex:inputField id="boatName" value="{!boatsold.name}"/>
+        <apex:inputField id="boatDate" value="{!boatsold.Date_Sold__c}"/>
+      
+        <apex:inputField id="boatLength" value="{!boatsold.Boat_Length__c}"/>
+        <apex:inputField id="boatEmail" value="{!boatsold.Email_of_Customer__c}"/>
+        <apex:inputField id="boatPrice" value="{!boatsold.Price_Of_Boat__c}"/>
+        <apex:inputField id="boatCustomer" value="{!boatsold.Sold_to__c}"/>
+     </apex:pageBlockSection>
+    </apex:pageBlock>
+  </apex:form>
+</apex:page>

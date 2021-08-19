@@ -1,0 +1,15 @@
+<apex:page controller="BoatSoldController" lightningStylesheets="true">
+    <h1>Convertible Offshore</h1>
+    <apex:form >
+        <apex:pageBlock >
+           <apex:pageBlockSection >
+               <apex:image url="{!URLFOR($Resource.boatPics2, 'boatPics2/ConvertibleOffshoreBoat.jpg')}" width="400"></apex:image>
+           </apex:pageBlockSection>
+           <apex:pageBlockButtons >
+               <apex:commandButton value="Previous Boat" action="{!centeroffshore}"></apex:commandButton> <br/>
+               <apex:commandButton value="Next Boat" action="{!walkaroundoffshore}"></apex:commandButton> <br/>
+               <apex:commandButton value="Buy" action="{!boat5}"></apex:commandButton>
+           </apex:pageBlockButtons>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

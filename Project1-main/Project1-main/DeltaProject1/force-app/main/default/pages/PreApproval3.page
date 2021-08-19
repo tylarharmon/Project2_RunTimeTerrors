@@ -1,0 +1,44 @@
+<apex:page controller="CustomerInformationController" lightningStylesheets="true" >
+    
+    <script>
+      function confirmCancel() {
+      var isCancel = confirm("Are you sure you wish to cancel?");
+      if (isCancel) return true;
+  
+     return false;
+  } 
+    </script>
+    
+    <apex:sectionHeader title="Financing Application" subtitle="Step 3 of 3" />
+    <apex:form >
+        <apex:pageBlock title="Review and Verify Your Information is Entered Correctly" >
+            <apex:pageBlockButtons >
+                <apex:commandButton action="{!Step2}" value="Previous" />
+                <apex:commandButton action="{!save}" value="Submit" />
+                <apex:commandButton action="{!cancel}" value="Cancel"
+                                    onclick="return confirmCancel()" immediate="true"/>
+            </apex:pageBlockButtons>
+            <apex:pageBlockSection title="Cutomer Information" columns="1">
+                  <apex:outputField value="{!Customer.First_Name__c}"/>
+                  <apex:outputField value="{!Customer.Last_Name__c}"/>
+                  <apex:outputField value="{!Customer.Phone__c}"/>
+                  <apex:outputField value="{!Customer.Email__c}"/>
+                  <apex:outputField value="{!Customer.Home_Owner__c}"/>
+                  <apex:outputField value="{!Customer.Street_Address__c}"/>
+                  <apex:outputField value="{!Customer.City__c}"/>
+                  <apex:outputField value="{!Customer.State__c}"/>
+                  <apex:outputField value="{!Customer.Zip_Code__c}"/>
+            </apex:pageBlockSection>
+            <apex:pageBlockSection Title="Company Information" columns="1">
+               <apex:outputField value="{!Customer.Occupation__c}"/>
+                <apex:outputField value="{!Customer.Company_Name__c}"/>
+                <apex:outputField value="{!Customer.Company_Phone__c}"/>
+               <apex:outputField value="{!Customer.Annual_Salary__c}"/>
+            </apex:pageBlockSection>
+            <apex:pageBlockSection title="Finances" columns="1">
+                <apex:outputField value="{!Customer.Credit_Score__c}"/>
+                <apex:outputField value="{!Customer.Estimated_Down_Payment__c}"/>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>
