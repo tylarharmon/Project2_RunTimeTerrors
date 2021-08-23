@@ -1,0 +1,37 @@
+<apex:page standardController="Parts_Order_List__c" recordSetVar="PartOrdersList" extensions="PartOrderEdit_CX" lightningStylesheets="true">
+    <script type="text/javascript">
+        function test(){
+            listView();
+    }
+    </script>
+    <apex:form >
+        <apex:pageBlock id="PartOrdersList" title="Part Orders" mode="inlineEdit">
+            <apex:pageMessages />
+            <apex:pageBlockButtons >
+                <apex:commandButton value="Save" action="{!save}" onclick="test();" reRender="PartOrdersList"/>
+                <apex:actionFunction name = "listView" action = "{!listView}"/>
+                <apex:commandButton value="Cancel" action="{!cancel}"/>
+            </apex:pageBlockButtons>
+            <apex:pageBlockTable var="Part" value="{!PartOrdersList}">
+                <apex:column headerValue="Part Type">
+                    <apex:inputField value="{!Part.Part_Type__c}" />
+                </apex:column>
+                <apex:column headerValue="Part Name">
+                    <apex:outputField value="{!Part.Name}" />
+                </apex:column>
+                <apex:column headerValue="Supplier">
+                    <apex:outputField value="{!Part.Supplier__c}" />
+                </apex:column>
+                <apex:column headerValue="Quantity">
+                    <apex:outputField value="{!Part.Quantity__c}" />
+                </apex:column>
+                <apex:column headerValue="Date Ordered">
+                    <apex:outputField value="{!Part.Date_Ordered__c}" />
+                </apex:column>
+                <apex:column headerValue="Expected Arrival Date">
+                    <apex:outputField value="{!Part.Expected_Arrival_Date__c}"/>
+                </apex:column>
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

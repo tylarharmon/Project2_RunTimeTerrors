@@ -1,0 +1,25 @@
+<apex:page controller="Supplier_CC" lightningStylesheets="True">
+    <apex:form >
+    <apex:pageBlock title="Supplier Info" mode="edit" id="SuppTable">
+        <apex:outputText >Search Text: </apex:outputText>
+        <apex:inputText style="vertical-align: middle;" id="searchText" value="{!searchText}"/>
+        <apex:commandButton status="notifyUser" reRender="SuppTable" value="Search" action="{!Search}"/>
+        <apex:actionStatus id="notifyUser" startText="Searching..." stopText=" "></apex:actionStatus>
+        <apex:pageMessages />
+        <apex:pageBlockTable value="{!Supple}" var="Sup">
+            <apex:column headerValue="Name">
+                <apex:outputLink value="{!URLFOR($Action.Supplier__c.View, Sup.id)}">
+                    {!Sup.Name}
+                </apex:outputLink>
+            </apex:column>
+            <apex:column value="{!Sup.Phone__c}"/>
+            <apex:column value="{!Sup.Website__c}"/>
+            <apex:column value="{!Sup.Region__c}"/>
+            <apex:column value="{!Sup.CreatedById}"/>
+        </apex:pageBlockTable>
+        <apex:pageBlockButtons >
+            <apex:commandButton value="Refresh" onclick="location.reload();" reRender="SuppTable"/>
+        </apex:pageBlockButtons>
+    </apex:pageBlock>
+    </apex:form>
+</apex:page>
