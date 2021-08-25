@@ -27,10 +27,10 @@
     <forgotPasswordTemplate>unfiled$public/CommunityForgotPasswordEmailTemplate</forgotPasswordTemplate>
     <gatherCustomerSentimentData>false</gatherCustomerSentimentData>
     <networkMemberGroups>
-        <profile>Admin</profile>
         <profile>Assembler</profile>
-        <profile>Director of Sales</profile>
         <profile>CEO</profile>
+        <profile>Admin</profile>
+        <profile>Director of Sales</profile>
         <profile>Chief Manufacturing Executive</profile>
     </networkMemberGroups>
     <networkPageOverrides>
