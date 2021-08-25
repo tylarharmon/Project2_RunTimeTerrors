@@ -1,0 +1,32 @@
+<apex:page controller="CustomerInformationController" lightningStylesheets="true" >
+    <script>
+      function confirmCancel() {
+      var isCancel = confirm("Are you sure you wish to cancel?");
+      if (isCancel) return true;
+  
+     return false;
+  } 
+    </script>
+    
+    <apex:sectionHeader title="Financing Application" subtitle="Step 1 OF 3"/>
+        <Apex:Form >
+            <apex:pageBlock title="Customer Information" mode="edit">
+                <apex:pageBlockButtons >
+                    <apex:commandButton action="{!Begin}" value="Back"/>
+                    <apex:commandButton action="{!Step2}" value="Next"/>
+                    <apex:commandButton action="{!cancel}" value="Cancel"
+                                        onclick="return confirmCancel()" immediate="true" />
+                </apex:pageBlockButtons>
+              <apex:pageBlockSection title="Customer Information" columns="1" >
+                  <apex:inputField id="CustomerFirstName" value="{!Customer.First_Name__c}"/>
+                  <apex:inputField id="CustomerLastName" value="{!Customer.Last_Name__c}"/>
+                  <apex:inputField id="CustomerPhone" value="{!Customer.Phone__c}"/>
+                  <apex:inputField id="CustomerEmail" value="{!Customer.Email__c}"/>
+                  <apex:inputField id="CustomerHomeOwner" value="{!Customer.Home_Owner__c}"/>
+                  <apex:inputField id="CustomerAddress" value="{!Customer.Street_Address__c}"/>
+                  <apex:inputField id="CustomerCity" value="{!Customer.City__c}"/>
+                  <apex:inputField id="CustomerState" value="{!Customer.State__c}"/>
+              </apex:pageBlockSection>
+            </apex:pageBlock>
+        </Apex:Form>
+</apex:page>

@@ -1,0 +1,17 @@
+<apex:page Controller="CustomerInformationController" lightningStylesheets="true">
+    <style>
+        body {
+            text-align: center;
+        }
+    </style>
+    <apex:form >
+        <apex:pageBlock >
+            <h1>Get Financed</h1>
+            <h2>Take the First Step to Owning Your Dream Boat </h2>
+            <apex:pageBlockButtons >
+            <apex:commandButton action="{!Step1}" value="Begin"/>
+            </apex:pageBlockButtons>
+        </apex:pageBlock>
+        
+    </apex:form>
+</apex:page>
