@@ -22,8 +22,6 @@
     <referrerPolicyOriginWhenCrossOrigin>true</referrerPolicyOriginWhenCrossOrigin>
     <requireHttps>true</requireHttps>
     <selfRegPage>CommunitiesSelfReg</selfRegPage>
-    <siteAdmin>tylarharmon@brave-narwhal-honqn7.com</siteAdmin>
-    <siteGuestRecordDefaultOwner>tylarharmon@brave-narwhal-honqn7.com</siteGuestRecordDefaultOwner>
     <siteType>ChatterNetwork</siteType>
-    <subdomain>project2runtime-developer-edition</subdomain>
+    <subdomain>deltaforce1-developer-edition</subdomain>
 </CustomSite>

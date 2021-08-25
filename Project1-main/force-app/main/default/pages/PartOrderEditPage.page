@@ -9,7 +9,7 @@
             <apex:pageMessages />
             <apex:pageBlockButtons >
                 <apex:commandButton value="Save" action="{!save}" onclick="test();" reRender="PartOrdersList"/>
-                <apex:actionFunction name="listView" action="{!listView}"/>
+                <apex:actionFunction name = "listView" action = "{!listView}"/>
                 <apex:commandButton value="Cancel" action="{!cancel}"/>
             </apex:pageBlockButtons>
             <apex:pageBlockTable var="Part" value="{!PartOrdersList}">
