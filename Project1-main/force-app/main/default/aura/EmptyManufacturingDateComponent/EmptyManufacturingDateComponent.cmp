@@ -1,4 +1,4 @@
-<aura:component controller="ManufacturingStartDate" implements="flexipage:availableForAllPageTypes">
+<aura:component controller="ManufacturingStartDate" implements="forceCommunity:availableForAllPageTypes" access = "global">
     <aura:attribute name = "PageHeading" type ="string" default = "Update Using Data Table"/>
     <aura:attribute name="boat" type="Boat_Manufacturing__c"/>
     <aura:attribute name="mycolumns" type="List"/>
