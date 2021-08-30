@@ -1,0 +1,80 @@
+<aura:component>
+    <aura:attribute name="activeSections" type="List"  />
+    <aura:attribute name="activeSectionsMessage" type="String" default="" />
+
+    <!--<p>{! v.activeSectionsMessage }</p>-->
+    <h1 class="slds-text-heading_medium">FAQ</h1>
+    <lightning:card class="slds-container_medium">
+
+
+    <lightning:accordion
+        allowMultipleSectionsOpen="true"
+        onsectiontoggle="{! c.handleSectionToggle }"
+        activeSectionName="{! v.activeSections }"
+        class="slds-container_medium"
+    >
+        <lightning:accordionSection name="A" label="What Do You Need To Qualify For A Boat Loan?">
+            <aura:set attribute="actions">
+                <lightning:buttonMenu aura:id="menu" alternativeText="Show menu" menuAlignment="right" iconSize="x-small">
+                    <lightning:menuItem value="New" label="Menu Item One" />
+                    <lightning:menuItem value="Edit" label="Menu Item Two" />
+                </lightning:buttonMenu>
+            </aura:set>
+            <aura:set attribute="body">
+                <p>You will need to show the lender your financial ability to pay back a boat loan. Banks will look at your credit rating, 
+                    so it’s important for you to look at it first. Three major bureaus provide this kind of information to lending institutions: Experian, 
+                    Equifax and Trans Union. Start there.</p><br/>
+                <p>It’s important for you to check your credit rating before the bank looks into it. Here’s why: If you find a problem or 
+                    some inaccuracies, it’s much easier for you to get those straightened out before you apply for a loan.</p><br/>
+                <p>Be sure there are no closed accounts that are being reported as open, and close any open accounts you don’t use anymore. By 
+                    accessing your credit report first, you can stop problems before they start. There are lenders out there who will do 
+                    subprime financing, which provides options for people with lower credit scores, but the national lenders will likely require 
+                    credit scores to be 680 or higher. So, tidy things up before you begin.</p><br/>
+                <p>Banks also look at your debt-to-income ratio, which is determined by dividing your monthly debt payments by your monthly 
+                    income. Many lenders prefer a debt-to-income ratio of around 40 or 45 percent, including payment on the boat loan for which you are 
+                    applying.</p><br/>
+                <p>Lenders also will look at your net worth and liquidity. Your net worth is defined as assets minus liabilities – usually properties 
+                    owned less any debt you have. A liquid asset is anything that can be turned into cash within 30 days or less.</p>
+            </aura:set>
+        </lightning:accordionSection>
+        <lightning:accordionSection name="B" label="Boat Down Payments And Ownership Costs">
+                <p>“Obviously, if you’re applying for a boat loan, you have to be able to show that you have the money to make the down payment, 
+                    but also be able to pay for the expenses of owning a boat – whether that’s insurance, slip fees, fuel, all those things that go into boat
+                     ownership,” said David Mann, membership program manager for Boat U.S., a boat owners association that connects lenders with buyers, 
+                     among other services.</p><br/>
+                <p>Boat down payments are usually between 10-20 percent, but can depend on the cost and value of 
+                    the boat as well as your location and finances.</p><br/>
+                <p>The boat loan rate for which you qualify is going to hinge on factors mentioned above, but it also could swing on the term of the loan — how 
+                    many years you’ll be paying on it — or even the age of the boat you’re buying. For example, you might be able to get a better 
+                    interest rate on a boat that’s as little as one year newer. In general, smaller loans for shorter terms usually have higher interest rates than 
+                    larger loans for longer terms. Again, rates can vary with your credit history.</p><br/>
+                <p>“First, we always say do your research. In marine lending, there’s a lot of disparity between lenders,” Mann said. “An individual might have 
+                    a relationship with a local bank or credit union that might not necessarily know boats, but they do boat financing because they do car and RV 
+                    and motorcycle loans. Sometimes it’s easier and faster to work with these local banks or credit unions, but it could also mean that your loan 
+                    terms will be shorter. The national lenders, on the other hand, will finance boats in all 50 states and they often have a good 
+                    understanding of boats. Be aware that their underwriting process can be a little bit more rigorous.”</p>         
+        </lightning:accordionSection>
+        <lightning:accordionSection name="C" label="Steps in the Process of Boat Financing">
+                <p>Shopping for a boat loan overlaps with the process of buying a new boat. Here are the basic steps:</p><br/>
+                
+                    <p>1. Know and understand your financial abilities and your credit rating. Check your credit with the major credit reporting bureaus
+                         and correct any inaccuracies.
+                    </p><br/>
+                         <p>2. Call around to local resources and look online to find out what different boat lenders can do for you. Boat financing is not like 
+                             financing a car where you can walk into a dealership and leave in a few hours with a new or used car. Boat financing can take longer 
+                             if the lender requires a report from a marine surveyor.
+                         </p><br/>
+                             <p>
+                                3. When you apply, be ready with tax returns and bank statements that show your financial ability to repay. Be 
+                                prepared to submit those materials to speed up the review process.
+                             </p><br/>
+                             <p>
+                                4. Be aware of special use limitations. If you want to live aboard your boat, use it for commercial purposes such 
+                                as charters or as a fishing guide or to cruise internationally, tell the lender. Not all lenders will loan money on a 
+                                boat used for those purposes.
+                             </p><br/>
+        </lightning:accordionSection>
+    </lightning:accordion>
+</lightning:card>
+</aura:component>
+
