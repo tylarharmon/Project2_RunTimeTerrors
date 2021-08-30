@@ -1,0 +1,82 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes" access="global" >
+
+    <lightning:card class="slds-container_medium" title="Inshore Boats" >
+
+    <lightning:accordion allowMultipleSectionsOpen="true" class="slds-container_medium" >
+
+      <!--Bay Inshoreboat tab-->
+       
+        <lightning:accordionSection name="A" label="Bay Inshore">
+            
+            <aura:set attribute="body">
+                
+                <img src = "{!$Resource.boatPics2 + '/boatPics2/BayInshoreBoat.jpg'}"/>
+                <p></p>
+                <br/>
+                
+            </aura:set>
+        </lightning:accordionSection>
+        
+         <!--Center Console Inshoreboat tab-->
+
+        <lightning:accordionSection name="B" label="Center Console Inshore Boat" class="titles">
+
+              <img src = "{!$Resource.boatPics2 + '/boatPics2/CenterInshoreBoat.jpg'}"/>
+              <p></p>
+                 <br/>
+
+        </lightning:accordionSection>
+
+        <!--Flat Inshoreboat tab-->
+   
+        <lightning:accordionSection name="C" label="Flat Inshore Boat">
+
+        <img src = "{!$Resource.boatPics2 + '/boatPics2/FlatInshoreBoat.jpg'}"/>
+              
+        <p></p>
+                 <br/>
+            
+
+        </lightning:accordionSection>
+        
+    </lightning:accordion>
+    </lightning:card>
+
+    <br/>
+
+      <!--Section for offshore boats-->
+      <!--                         -->
+
+    <lightning:card class="slds-container_medium" title="Offshore Boats" >
+  
+
+    <lightning:accordion allowMultipleSectionsOpen="true" class="slds-container_medium" title="Offshore Boats"  >
+
+    <!--Center Console Offshoreboat tab-->
+    <lightning:accordionSection name="D" label="Center Console Offshore Boat">
+
+
+        <img src = "{!$Resource.boatPics2 + '/boatPics2/Centeroffshoreboat.jpg'}"/>
+              
+        <p></p>
+                 <br/>
+             
+
+
+        </lightning:accordionSection>
+
+        <!--Walkaround Offshoreboat tab-->
+
+        <lightning:accordionSection name="E" label="Walkaround Offshore Boat">
+
+
+        <img src = "{!$Resource.boatPics2 + '/boatPics2/WalkOffshoreBoat.jpg'}"/>
+                  
+        <p></p>
+        <br/>
+
+        </lightning:accordionSection>
+    </lightning:accordion>
+  </lightning:card>
+</aura:component>
+
