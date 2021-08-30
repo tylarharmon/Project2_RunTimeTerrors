@@ -48,7 +48,7 @@
       <!--                         -->
 
     <lightning:card class="slds-container_medium" title="Offshore Boats" >
-        <lightning:button label="Click to buy" title="Buy it" onclick="{!c.boat1 }"/>
+  
 
     <lightning:accordion allowMultipleSectionsOpen="true" class="slds-container_medium" title="Offshore Boats"  >
 
