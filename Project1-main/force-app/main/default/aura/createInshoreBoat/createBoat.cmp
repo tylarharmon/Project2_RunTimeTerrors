@@ -1,0 +1,15 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes" access="global">
+    
+    <lightning:notificationsLibrary aura:id="notifLib"/>
+  
+
+    <!-- creation wizard for inshore boat types-->
+   <h1>Input boat order information</h1>
+
+    <aura:attribute name="fields" type="String[]" default="['Boat_Type_Inshore__c','Date_Sold__c','Boat_Length__c', 'Email_of_Customer__c', 'Price_Of_Boat__c', 'Sold_to__c']"/>
+    <lightning:notificationsLibrary aura:id="notifLib"/>
+    <lightning:card class="slds-box slds-theme_default slds-theme_backgroundColor-lightblue slds-align-left slds-col slds-grid">
+        <lightning:recordForm objectApiName="Boat_Sold__c" fields="{!v.fields}" onsuccess="{c.handleSuccess}" />
+    </lightning:card>
+  
+</aura:component>	
