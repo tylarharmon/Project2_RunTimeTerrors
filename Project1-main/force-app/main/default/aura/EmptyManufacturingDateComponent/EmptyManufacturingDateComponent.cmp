@@ -1,0 +1,18 @@
+<aura:component controller="ManufacturingStartDate" implements="flexipage:availableForAllPageTypes">
+    <aura:attribute name = "PageHeading" type ="string" default = "Update Using Data Table"/>
+    <aura:attribute name="boat" type="Boat_Manufacturing__c"/>
+    <aura:attribute name="mycolumns" type="List"/>
+    
+    <aura:handler name="init" value="{! this }" action="{! c.init }"/>
+    <aura:handler event = "force:refreshView" action="{! c.init }"/>
+    
+    <lightning:card title = "Boats in Production">
+    	<lightning:datatable data="{!v.boat}"
+            aura:id = "boatDataTable"
+        	columns="{!v.mycolumns}"
+        	keyField="Id"
+        	hideCheckboxColumn="true"
+            onsave="{!c.saveBoat}">    
+        </lightning:datatable>
+    </lightning:card>
+</aura:component>
