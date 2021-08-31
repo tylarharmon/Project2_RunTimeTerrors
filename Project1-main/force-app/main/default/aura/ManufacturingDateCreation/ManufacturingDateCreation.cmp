@@ -1,4 +1,4 @@
-<aura:component implements = "flexipage:availableForAllPageTypes">
+<aura:component implements="forceCommunity:availableForAllPageTypes" access = "global">
     <lightning:card title = "Schedule the production of a boat">
     	<lightning:recordEditForm aura:id="recordEditForm"
                            objectApiName="Boat_Manufacturing__c">
