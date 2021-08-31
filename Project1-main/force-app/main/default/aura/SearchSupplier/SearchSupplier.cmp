@@ -1,0 +1,28 @@
+<aura:component controller ="SearchSupplierController">
+    <aura:attribute name = "suppliers" type ="List"/>
+    <aura:attribute name="key" type="String"/>
+    <aura:handler name ="init" value="{!this}" action ="{!c.myAction}"/>
+    <lightning:input type ="text" name ="searchKey" label="Enter" aura:id="searchKey" onchange ="{!c.searchKeyChange}" placeholder="Search"/>
+    <table class="slds-table slds-table_bordered slds-table_striped slds-table_cell-buffer slds-table_fixed-layout">
+        <thead>
+            <tr class="slds-text-heading_label">
+                <th scope="col"> <div class="slds-truncate" title="Name">Supplier Name</div></th>
+                <th scope="col"><div class="slds-truncate"  title="Number">Number</div></th>
+                <th scope="col"><div class="slds-truncate"  title="WebSite">Web Site</div></th>
+                <th scope="col"><div class="slds-truncate"  title="Region">Region</div></th>
+                <th scope="col"><div class="slds-truncate"  title="CreatedBy">CreatedBy</div></th>
+            </tr>
+        </thead>
+        <tbody>
+            <aura:iteration items="{!v.suppliers}" var ="supplier">
+                <tr>
+                    <td><div class="slds-truncate" title="{!supplier.Name}">{!supplier.Name}</div></td>
+                    <td><div class="slds-truncate" title="{!supplier.Phone__c}">{!supplier.Phone__c}</div></td>
+                    <td><div class="slds-truncate" title="{!supplier.Website__c}">{!supplier.Website__c}</div></td>
+                    <td><div class="slds-truncate" title="{!supplier.Region__c}">{!supplier.Region__c}</div></td>
+                    <td><div class="slds-truncate" title="{!supplier.CreatedById}">{!supplier.CreatedById}</div></td>
+                </tr>
+            </aura:iteration>
+        </tbody>
+    </table>
+</aura:component>	
