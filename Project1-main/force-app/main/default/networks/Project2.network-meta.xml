@@ -5,8 +5,8 @@
     <changePasswordTemplate>unfiled$public/CommunityChangePasswordEmailTemplate</changePasswordTemplate>
     <communityRoles/>
     <disableReputationRecordConversations>true</disableReputationRecordConversations>
-    <emailSenderAddress>a1313barnard@gmail.com</emailSenderAddress>
-    <emailSenderName>Customer Approval Portal</emailSenderName>
+    <emailSenderAddress>tylar.harmon@revature.net</emailSenderAddress>
+    <emailSenderName>Project2</emailSenderName>
     <enableCustomVFErrorPageOverrides>false</enableCustomVFErrorPageOverrides>
     <enableDirectMessages>true</enableDirectMessages>
     <enableGuestChatter>false</enableGuestChatter>
@@ -19,7 +19,7 @@
     <enablePrivateMessages>false</enablePrivateMessages>
     <enableReputation>false</enableReputation>
     <enableShowAllNetworkSettings>false</enableShowAllNetworkSettings>
-    <enableSiteAsContainer>true</enableSiteAsContainer>
+    <enableSiteAsContainer>false</enableSiteAsContainer>
     <enableTalkingAboutStats>true</enableTalkingAboutStats>
     <enableTopicAssignmentRules>true</enableTopicAssignmentRules>
     <enableTopicSuggestions>false</enableTopicSuggestions>
@@ -27,11 +27,7 @@
     <forgotPasswordTemplate>unfiled$public/CommunityForgotPasswordEmailTemplate</forgotPasswordTemplate>
     <gatherCustomerSentimentData>false</gatherCustomerSentimentData>
     <networkMemberGroups>
-        <profile>Assembler</profile>
-        <profile>CEO</profile>
         <profile>Admin</profile>
-        <profile>Director of Sales</profile>
-        <profile>Chief Manufacturing Executive</profile>
     </networkMemberGroups>
     <networkPageOverrides>
         <changePasswordPageOverrideSetting>Standard</changePasswordPageOverrideSetting>
@@ -40,14 +36,30 @@
         <loginPageOverrideSetting>Standard</loginPageOverrideSetting>
         <selfRegProfilePageOverrideSetting>Standard</selfRegProfilePageOverrideSetting>
     </networkPageOverrides>
-    <picassoSite>Customer_Approval_Portal1</picassoSite>
+    <picassoSite>Project21</picassoSite>
     <selfRegistration>false</selfRegistration>
     <sendWelcomeEmail>true</sendWelcomeEmail>
-    <site>Customer_Approval_Portal</site>
+    <site>Project2</site>
     <status>UnderConstruction</status>
     <tabs>
-        <defaultTab>home</defaultTab>
+        <customTab>partPage1</customTab>
+        <customTab>EmptyManufacturingDatePage</customTab>
+        <customTab>SupplierQuery</customTab>
+        <customTab>PartOrderEditPage</customTab>
+        <customTab>PreApproval</customTab>
+        <customTab>PreApproval1</customTab>
+        <customTab>PreApproval2</customTab>
+        <customTab>PreApproval3</customTab>
+        <customTab>Bayinshore</customTab>
+        <customTab>CenterInshore</customTab>
+        <customTab>CenterOffShore</customTab>
+        <customTab>Convertibleoffshore</customTab>
+        <customTab>createBoat</customTab>
+        <customTab>Flatinshore</customTab>
+        <customTab>Walkaroundoffshore</customTab>
+        <defaultTab>Chatter</defaultTab>
         <standardTab>Chatter</standardTab>
     </tabs>
+    <urlPathPrefix>project2RTT</urlPathPrefix>
     <welcomeTemplate>unfiled$public/CommunityWelcomeEmailTemplate</welcomeTemplate>
 </Network>

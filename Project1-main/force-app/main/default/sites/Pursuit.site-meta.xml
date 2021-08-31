@@ -18,7 +18,7 @@
     <genericErrorPage>Exception</genericErrorPage>
     <inMaintenancePage>InMaintenance</inMaintenancePage>
     <indexPage>CommunitiesLanding</indexPage>
-    <masterLabel>Customer Approval Portal</masterLabel>
+    <masterLabel>Pursuit</masterLabel>
     <referrerPolicyOriginWhenCrossOrigin>true</referrerPolicyOriginWhenCrossOrigin>
     <requireHttps>true</requireHttps>
     <selfRegPage>CommunitiesSelfReg</selfRegPage>
@@ -26,4 +26,5 @@
     <siteGuestRecordDefaultOwner>tylarharmon@wise-bear-to0qwd.com</siteGuestRecordDefaultOwner>
     <siteType>ChatterNetwork</siteType>
     <subdomain>test400-developer-edition</subdomain>
+    <urlPathPrefix>PursuitBoats</urlPathPrefix>
 </CustomSite>
