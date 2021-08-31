@@ -36,6 +36,14 @@
 		<name>ApexTrigger</name>
 	</types>
 	<types>
+		<members>*</members>
+		<name>AssignmentRules</name>
+	</types>
+	<types>
+		<members>*</members>
+		<name>AutoResponseRules</name>
+	</types>		
+	<types>
 		<members>Pursuit</members>
 		<members>PursuitS268</members>
 		<members>Pursuit_Image</members>
@@ -144,6 +152,14 @@
 		<members>Boat_Sold__c.Email on boat sold</members>
 		<members>Customer__c.Welcome Email</members>
 		<name>WorkflowRule</name>
+	</types>
+	<types>
+		<members>Case</members>
+		<name>Settings</name>
+	</types>
+	<types>
+		<members>unfiled$public/Sales_Pursuit_Customer</members>
+		<name>EmailTemplate</name>
 	</types>
 	<version>51.0</version>
 </Package>
