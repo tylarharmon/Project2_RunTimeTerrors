@@ -1,4 +1,4 @@
-<aura:component controller ="SearchSupplierController">
+<aura:component controller ="SearchSupplierController" implements="forceCommunity:availableForAllPageTypes" access="global">
     <aura:attribute name = "suppliers" type ="List"/>
     <aura:attribute name="key" type="String"/>
     <aura:handler name ="init" value="{!this}" action ="{!c.myAction}"/>
