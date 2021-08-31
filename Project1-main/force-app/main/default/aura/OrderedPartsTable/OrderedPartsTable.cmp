@@ -1,4 +1,4 @@
-<aura:component controller="PartOrderEdit_CX" implements="force:hasRecordId,force:hasSObjectName,flexipage:availableForRecordHome,force:appHostable" access="global" >
+<aura:component controller="PartOrderEdit_CX" implements="forceCommunity:availableForAllPageTypes,force:hasRecordId,force:hasSObjectName,flexipage:availableForRecordHome,force:appHostable" access="global" >
 	<aura:attribute name="data" type="Object"/>
     <aura:attribute name="columns" type="List"/>
     <aura:attribute name="draftValueMap" type="Map" default="{}"/> 

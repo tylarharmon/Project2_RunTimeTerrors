@@ -1,4 +1,4 @@
-<aura:component controller="PartOrderEdit_CX" implements="force:hasRecordId,force:hasSObjectName,flexipage:availableForRecordHome,force:appHostable">
+<aura:component controller="PartOrderEdit_CX" implements="forceCommunity:availableForAllPageTypes,force:hasRecordId,force:hasSObjectName,flexipage:availableForRecordHome,force:appHostable">
     
     <lightning:card>
         <aura:set attribute="title"><lightning:icon iconName="utility:connected_apps" size="small"/>
